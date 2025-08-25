@@ -1,0 +1,71 @@
+
+:root{
+  --bg:#0b1d39;
+  --card:#0f2a54;
+  --muted:#7aa0ff;
+  --text:#e9f0ff;
+  --accent:#63e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 700px at 50% -10%, #183767 0%, var(--bg) 60%);
+  color:var(--text);
+}
+a{color:#a6c8ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;margin-bottom:24px
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#4b80ff,#7aa0ff)}
+.brand h1{font-size:20px;margin:0}
+.nav a{margin-right:14px;padding:8px 12px;border-radius:10px;background:#112e5c}
+.card{
+  background:linear-gradient(180deg,rgba(22,48,96,0.6),rgba(12,28,60,0.6));
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(4px);
+  border-radius:18px;
+  padding:20px;
+  box-shadow: 0 12px 30px rgba(3,10,30,0.3);
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.footer{opacity:0.7;margin-top:26px;font-size:13px}
+.badge{font-size:12px;padding:4px 8px;border:1px solid rgba(255,255,255,0.15);border-radius:999px}
+.kbd{border:1px solid rgba(255,255,255,0.25);padding:2px 6px;border-radius:6px;background:#0b1d39}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.12);margin:20px 0}
+/* Baliza sim */
+.sim-wrap{display:grid;grid-template-columns:340px 1fr;gap:18px}
+@media (max-width:860px){.sim-wrap{grid-template-columns:1fr}}
+.panel{background:#0f254b;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:16px}
+.panel h3{margin-top:0}
+.field{display:grid;gap:6px;margin:10px 0}
+.select,.input,.button{
+  width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.15);
+  background:#112e5c;color:var(--text)
+}
+.button{cursor:pointer;font-weight:600}
+.button:hover{filter:brightness(1.06)}
+.row{display:flex;gap:10px;align-items:center}
+.hint{opacity:.75;font-size:13px}
+.stage{
+  display:grid;place-items:center;min-height:340px;background:radial-gradient(600px 300px at 50% 20%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 50%, transparent 70%);
+  border-radius:16px;border:1px solid rgba(255,255,255,0.08)
+}
+.lantern{
+  width:140px;height:140px;border-radius:50%;
+  background:#ff2a2a; /* default red */
+  box-shadow:0 0 0px rgba(0,0,0,0.4);
+  transition:opacity .2s ease, box-shadow .2s ease, transform .2s ease;
+  opacity:.18;
+}
+.lit{opacity:1;box-shadow:0 0 28px 10px currentColor, 0 0 120px 30px currentColor}
+.legend{display:flex;gap:14px;flex-wrap:wrap;opacity:.9}
+.legend .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:6px 10px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.table{width:100%;border-collapse:collapse;font-size:14px}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.12);padding:8px 6px;text-align:left}
+.small{font-size:12px;opacity:.85}
