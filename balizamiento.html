@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balizamiento IALA • Manual de Navegación</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1>Balizamiento IALA</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="rumbos.html">Rumbos</a>
+        <a href="meteo.html">Meteorología</a>
+        <a href="estabilidad.html">Estabilidad</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h2>Simulador de luces</h2>
+      <div class="sim-wrap">
+        <div class="panel">
+          <h3>Parámetros</h3>
+          <div class="field">
+            <label for="preset">Característica de luz</label>
+            <select id="preset" class="select"></select>
+          </div>
+          <div class="field">
+            <label for="color">Color</label>
+            <select id="color" class="select">
+              <option>Roja</option>
+              <option>Verde</option>
+              <option>Blanca</option>
+              <option>Amarilla</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="intensity">Intensidad visual (simulada)</label>
+            <input id="intensity" class="input" type="range" min="0.2" max="1" step="0.02" value="0.9"/>
+            <div class="hint small">Solo afecta el brillo en pantalla, no la cadencia.</div>
+          </div>
+          <div class="row" style="margin-top:10px">
+            <button id="btnStart" class="button">▶ Iniciar</button>
+            <button id="btnStop" class="button" disabled>■ Detener</button>
+          </div>
+          <hr/>
+          <div class="small hint">Consejo: prueba <b>Fl(2) 6s</b>, <b>Iso 6s</b>, <b>LFl 10s</b>, <b>Oc(3) 10s</b>, <b>Mo(A) 6s</b>, <b>Q</b> y <b>VQ</b>.</div>
+        </div>
+
+        <div class="panel stage">
+          <div id="lantern" class="lantern"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Recordatorio rápido</h3>
+      <table class="table">
+        <thead><tr><th>Abreviatura</th><th>Significado</th><th>Notas</th></tr></thead>
+        <tbody>
+          <tr><td>F</td><td>Fijo</td><td>Luz continua</td></tr>
+          <tr><td>Fl</td><td>Destello</td><td>Encendido breve, apagado largo</td></tr>
+          <tr><td>LFl</td><td>Destello largo</td><td>Encendido prolongado</td></tr>
+          <tr><td>Oc</td><td>Ocultación</td><td>Apagado breve, encendido largo</td></tr>
+          <tr><td>Iso</td><td>Isofase</td><td>50% encendido / 50% apagado</td></tr>
+          <tr><td>Q / VQ</td><td>Rápida / Muy rápida</td><td>Parpadeos de alta frecuencia</td></tr>
+          <tr><td>Mo(A)</td><td>Morse A</td><td>· —</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Sistema IALA A/B: laterales rojas/verdes intercambian lado según la región. Chile usa <b>Sistema A</b>.</p>
+    </div>
+
+    <div class="footer">
+      <hr/>
+      <div>Manual Digital de Navegación • Balizamiento • 2025-08-25</div>
+    </div>
+  </div>
+
+  <script src="assets/sim.js"></script>
+</body>
+</html>
